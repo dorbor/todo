@@ -1,5 +1,6 @@
 const express = require("express");
-const mongoose = require("mongoose");
+
+const connectDB = require("./config/db");
 
 // const users = require("./routes/api/users");
 // const profile = require("./routes/api/profile");
@@ -7,14 +8,8 @@ const mongoose = require("mongoose");
 
 const app = express();
 
-// DB Config
-// const db = require("./config/keys").mongoURI;
-
-// Connect to MongoDB
-// mongoose
-//   .connect(db)
-//   .then(() => console.log("MongoDB Connected"))
-//   .catch((err) => console.log(err));
+// Connect DB
+connectDB();
 
 app.get("/", (req, res) => res.send("Hello World"));
 
