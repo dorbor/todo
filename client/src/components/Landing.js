@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
 
 const Landing = () => {
@@ -7,18 +8,18 @@ const Landing = () => {
       <Container>
         <div className="dark-overlay">
           <div className="landing-inner">
-            <h1 className="x-large">Developer Connector</h1>
+            <h1>Welcome To My Todo List</h1>
             <p className="lead">
-              Create a developer profile/portfolio, share posts and get help
-              from other developers
+              To use this todo list app, you have to login to your account. If
+              you don't have an account, kindly sign up to have one.
             </p>
             <div className="buttons p-3">
-              <a href="register.html" className="btn btn-primary m-3">
+              <Link to="register" className="btn btn-primary m-3">
                 Sign Up
-              </a>
-              <a href="login.html" className="btn btn-light">
+              </Link>
+              <Link to="login" className="btn btn-light">
                 Login
-              </a>
+              </Link>
             </div>
           </div>
         </div>
