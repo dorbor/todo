@@ -25,7 +25,7 @@ const Login = () => {
         },
       };
       const body = JSON.stringify(newUser);
-      const res = await axios.post("/api/user", body, config);
+      const res = await axios.post("/api/auth", body, config);
       console.log(res.data);
     } catch (error) {
       console.error(error.response.data);
@@ -50,10 +50,6 @@ const Login = () => {
               onChange={(e) => onChange(e)}
               required
             />
-            <small className="form-text">
-              This site uses Gravatar so if you want a profile image, use a
-              Gravatar email
-            </small>
           </div>
           <div className="form-group">
             <input

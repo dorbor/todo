@@ -5,7 +5,6 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const config = require("config");
 const { check, validationResult } = require("express-validator");
-// const { findOne } = require("../../models/User");
 
 // importing the User model from the user database
 const User = require("../../models/User");
