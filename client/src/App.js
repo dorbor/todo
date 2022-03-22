@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Landing from "./components/Landing";
 import Register from "./components/Register";
 import Login from "./components/Login";
+import Todo from "./components/Todo";
 
 function App() {
   return (
@@ -13,11 +14,11 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Landing />} />
-
+          <Route path="/todo" element={<Todo />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </Fragment>
     </Router>
   );
