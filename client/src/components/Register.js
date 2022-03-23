@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Container } from "react-bootstrap";
 
 const Register = () => {
+  const navigate = useNavigate();
+
   const [formData, SetFormData] = useState({
     name: "",
     email: "",
@@ -33,8 +35,9 @@ const Register = () => {
         const body = JSON.stringify(newUser);
         const res = await axios.post("/api/user", body, config);
         console.log(res.data);
+        navigate("/todo");
       } catch (error) {
-        console.error(error.response.data);
+        console.log(error);
       }
     }
   };

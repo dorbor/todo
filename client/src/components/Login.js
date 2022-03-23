@@ -14,7 +14,7 @@ const Login = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    const newUser = {
+    const loginUser = {
       email,
       password,
     };
@@ -24,7 +24,7 @@ const Login = () => {
           "Content-Type": "application/json",
         },
       };
-      const body = JSON.stringify(newUser);
+      const body = JSON.stringify(loginUser);
       const res = await axios.post("/api/auth", body, config);
       console.log(res.data);
     } catch (error) {

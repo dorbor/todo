@@ -14,11 +14,11 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/todo" element={<Todo />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/todo" element={<Todo />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </Fragment>
     </Router>
   );
