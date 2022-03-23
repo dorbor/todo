@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Container } from "react-bootstrap";
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const [formData, SetFormData] = useState({
     email: "",
     password: "",
@@ -27,6 +30,13 @@ const Login = () => {
       const body = JSON.stringify(loginUser);
       const res = await axios.post("/api/auth", body, config);
       console.log(res.data);
+
+      if (loginUser) {
+        // localStorage.setItem("token", loginUser.data);
+        navigate("/todo");
+      } else {
+        alert("Please check your username and password");
+      }
     } catch (error) {
       console.error(error.response.data);
     }
@@ -70,3 +80,32 @@ const Login = () => {
 };
 
 export default Login;
+
+// function App() {
+// 	const [email, setEmail] = useState('')
+// 	const [password, setPassword] = useState('')
+
+// 	async function loginUser(event) {
+// 		event.preventDefault()
+
+// 		const response = await fetch('http://localhost:1337/api/login', {
+// 			method: 'POST',
+// 			headers: {
+// 				'Content-Type': 'application/json',
+// 			},
+// 			body: JSON.stringify({
+// 				email,
+// 				password,
+// 			}),
+// 		})
+
+// 		const data = await response.json()
+
+// 		if (data.user) {
+// 			localStorage.setItem('token', data.user)
+// 			alert('Login successful')
+// 			window.location.href = '/dashboard'
+// 		} else {
+// 			alert('Please check your username and password')
+// 		}
+// 	}
