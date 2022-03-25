@@ -19,6 +19,9 @@ const Header = () => {
                 <Nav.Link className="text-light" href="/login">
                   <i className="fas fa-user"></i> Sign In
                 </Nav.Link>
+                <Nav.Link className="text-light" href="/register">
+                  <i className="fas fa-user"></i> Sign Up
+                </Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>

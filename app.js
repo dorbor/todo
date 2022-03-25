@@ -16,6 +16,7 @@ app.get("/", (req, res) => res.send("Hello World"));
 app.use("/api/todo", require("./routes/api/todo"));
 app.use("/api/user", require("./routes/api/user"));
 app.use("/api/auth", require("./routes/api/auth"));
+app.use("/api/todoAPi/", require("./routes/api/todoApi"));
 
 const port = process.env.PORT || 5000;
 
