@@ -2,7 +2,7 @@ import React from "react";
 
 const ListTodo = ({ todos, deleteTodo }) => {
   return (
-    <ul>
+    <ul className="p-5">
       {todos && todos.length > 0 ? (
         todos.map((todo) => {
           return (

@@ -43,7 +43,7 @@ class Todo extends Component {
     return (
       <div className="text-center py-5">
         <Container>
-          <h1>My Todo(s)</h1>
+          <h1>what Need to be done?</h1>
           <Input getTodos={this.getTodos} />
           <ListTodo todos={todos} deleteTodo={this.deleteTodo} />
         </Container>

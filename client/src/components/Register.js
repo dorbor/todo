@@ -35,7 +35,7 @@ const Register = () => {
         const body = JSON.stringify(newUser);
         const res = await axios.post("/api/user", body, config);
         console.log(res.data);
-        navigate("/note");
+        navigate("/todo");
       } catch (error) {
         console.log(error);
       }

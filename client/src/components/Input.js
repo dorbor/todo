@@ -33,7 +33,7 @@ class Input extends Component {
   render() {
     let { action } = this.state;
     return (
-      <div>
+      <div className="p-5">
         <input type="text" onChange={this.handleChange} value={action} />
         <button onClick={this.addTodo}>add todo</button>
       </div>
