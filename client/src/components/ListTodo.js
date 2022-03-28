@@ -12,7 +12,7 @@ const ListTodo = ({ todos, deleteTodo }) => {
           );
         })
       ) : (
-        <li>No todo(s) left</li>
+        <li>No todo left</li>
       )}
     </ul>
   );

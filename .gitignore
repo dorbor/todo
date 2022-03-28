@@ -7,7 +7,7 @@ yarn-error.log*
 lerna-debug.log*
 
 # config files and database access here
-config/production.json
+#config/production.json
 config/default.json
 
 # Diagnostic reports (https://nodejs.org/api/report.html)

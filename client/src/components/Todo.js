@@ -44,6 +44,7 @@ class Todo extends Component {
       <div className="text-center py-5">
         <Container>
           <h1>what Need to be done?</h1>
+          <p className="text-bold">Note: Click the todo list item to delete</p>
           <Input getTodos={this.getTodos} />
           <ListTodo todos={todos} deleteTodo={this.deleteTodo} />
         </Container>
