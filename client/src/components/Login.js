@@ -43,7 +43,7 @@ const Login = () => {
   };
 
   return (
-    <div className="py-5">
+    <div className="py-5 center">
       <Container>
         {" "}
         <h1 className="large text-primary">Sign In</h1>
@@ -72,7 +72,7 @@ const Login = () => {
             />
           </div>
 
-          <input type="submit" className="btn btn-primary" value="Login" />
+          <input type="submit" className="btn btn-primary my-3" value="Login" />
         </form>
       </Container>
     </div>

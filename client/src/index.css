@@ -64,110 +64,6 @@ footer p {
   height: 100%;
 }
 
-/* Forms */
-/* .form .form-group {
-  margin: 1.2rem 0;
-}
-
-.form .form-text {
-  display: block;
-  margin-top: 0.3rem;
-  color: #888;
-}
-
-.form input[type="text"],
-.form input[type="email"],
-.form input[type="password"],
-.form input[type="date"],
-.form select,
-.form textarea {
-  display: block;
-  width: 70%;
-  padding: 0.4rem;
-  font-size: 1.2rem;
-  border: 1px solid #ccc;
-}
-
-.form input[type="submit"],
-button {
-  font: inherit;
-}
-
-.form .social-input {
-  display: flex;
-}
-
-.form .social-input i {
-  padding: 0.5rem;
-  width: 4rem;
-}
-
-.note {
-  background: #fff;
-  border-radius: 7px;
-  box-shadow: 0 2px 5px #ccc;
-  padding: 10px;
-  width: 240px;
-  margin: 16px;
-  float: left;
-}
-.note h1 {
-  font-size: 1.1em;
-  margin-bottom: 6px;
-}
-.note p {
-  font-size: 1.1em;
-  margin-bottom: 10px;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-.note button {
-  position: relative;
-  float: right;
-  margin-right: 10px;
-  color: #f5ba13;
-  border: none;
-  width: 36px;
-  height: 36px;
-  cursor: pointer;
-  outline: none;
-}
-
-form {
-  position: relative;
-  width: 480px;
-  margin: 30px auto 20px auto;
-  background: #fff;
-  padding: 15px;
-  border-radius: 7px;
-  box-shadow: 0 1px 5px rgb(138, 137, 137);
-}
-form input,
-form textarea {
-  width: 100%;
-  border: none;
-  padding: 4px;
-  outline: none;
-  font-size: 1.2em;
-  font-family: inherit;
-  resize: none;
-}
-form button {
-  position: absolute;
-  right: 18px;
-  bottom: -18px;
-  background: #f5ba13;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  outline: none;
-} */
-
 input {
   height: 40px;
   width: 50%;
@@ -182,7 +78,7 @@ input:focus {
   outline: none;
 }
 
-button {
+.button {
   width: 25%;
   height: 45px;
   border: none;
@@ -214,4 +110,10 @@ li {
   border-radius: 5px;
   overflow-wrap: break-word;
   cursor: pointer;
+}
+
+.center {
+  margin: 0 auto;
+  text-align: center;
+  width: 80%; /* value of your choice which suits your alignment */
 }

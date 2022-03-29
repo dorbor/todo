@@ -35,7 +35,9 @@ class Input extends Component {
     return (
       <div className="p-5">
         <input type="text" onChange={this.handleChange} value={action} />
-        <button onClick={this.addTodo}>add todo</button>
+        <button className="button" onClick={this.addTodo}>
+          add todo
+        </button>
       </div>
     );
   }
