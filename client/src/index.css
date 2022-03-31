@@ -1,13 +1,12 @@
 body {
   margin: 0;
-  font-family: "McLaren", cursive;
+  font-family: "Courier New";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, monospace;
 }
 
 header {

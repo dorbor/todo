@@ -17,6 +17,7 @@ app.use(express.json({ extended: false }));
 app.use("/api/todo", require("./routes/api/todo"));
 app.use("/api/user", require("./routes/api/user"));
 app.use("/api/auth", require("./routes/api/auth"));
+app.use("/api/logout", require("./routes/api/logout"));
 app.use("/api/todoAPi/", require("./routes/api/todoApi"));
 
 // serve static access in production
