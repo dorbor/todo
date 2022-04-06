@@ -27,4 +27,18 @@ router.delete("/:id", (req, res, next) => {
     .catch(next);
 });
 
+router.put("/:id", async (req, res) => {
+  let todo = await Todo.findById(req.params.id);
+  todo = req.body;
+
+  const editTodo = new Todo(todo);
+
+  try {
+    await Todo.updateOne({ _id: req.params.id }, editTodo);
+    res.status(201).json(editTodo);
+  } catch (error) {
+    res.status(409).json({ message: error.message });
+  }
+});
+
 module.exports = router;

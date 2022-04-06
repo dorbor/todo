@@ -27,14 +27,16 @@ class Todo extends Component {
   };
 
   deleteTodo = (id) => {
-    axios
-      .delete(`/api/todoAPi/${id}`)
-      .then((res) => {
-        if (res.data) {
-          this.getTodos();
-        }
-      })
-      .catch((err) => console.log(err));
+    if (window.confirm("Are you show you want to delete this review?")) {
+      axios
+        .delete(`/api/todoAPi/${id}`)
+        .then((res) => {
+          if (res.data) {
+            this.getTodos();
+          }
+        })
+        .catch((err) => console.log(err));
+    }
   };
 
   render() {
@@ -44,7 +46,6 @@ class Todo extends Component {
       <div className="text-center py-5">
         <Container>
           <h1>what Need to be done?</h1>
-          <p className="text-bold">Note: Click the todo list item to delete</p>
           <Input getTodos={this.getTodos} />
           <ListTodo todos={todos} deleteTodo={this.deleteTodo} />
         </Container>
