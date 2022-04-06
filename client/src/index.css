@@ -125,23 +125,15 @@ li {
 
 .delete {
   display: inline-block;
-  padding: 0.2em 0.5em;
-  /* margin-bottom: 2em; */
   border: none;
-  border-radius: 2em;
   box-sizing: border-box;
-  color: #fff;
-  background-color: #ff6961;
-  text-align: center;
+  color: #ff0000ed;
+  background: none;
 }
 
 .edit {
-  border-radius: 2em;
-  padding: 0.1em 0.5em;
-  /* margin-bottom: 2em; */
-  border-radius: 2em;
   border: none;
   box-sizing: border-box;
-  color: #fff;
-  background-color: #4eb5f1;
+  color: #0d52dc;
+  background: none;
 }
