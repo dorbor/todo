@@ -23,7 +23,7 @@ const EditTodo = () => {
       <Container>
         <h3 className="m-5">Kindly hit the update button after editing</h3>
         <input type="text" />
-        <button className="button">Update</button>
+        <button className="btn my-1">Update</button>
       </Container>
     </div>
   );

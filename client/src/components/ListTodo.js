@@ -16,7 +16,7 @@ const ListTodo = ({ todos, deleteTodo }) => {
                   </button>
                 </Link>
                 <button
-                  className="delete mx-2"
+                  className="delete mx-1"
                   onClick={() => deleteTodo(todo._id)}
                 >
                   <i className="fas fa-times"></i>
