@@ -48,7 +48,6 @@ const EditTodo = () => {
 
   return (
     <div className="p-5 text-center">
-      <buttom> Back</buttom>
       <h3 className="m-3">Kindly hit the update button after editing </h3>
       <input
         type="text"
