@@ -27,7 +27,7 @@ class Todo extends Component {
   };
 
   deleteTodo = (id) => {
-    if (window.confirm("Are you show you want to delete this review?")) {
+    if (window.confirm("Are you show you want to delete this item?")) {
       axios
         .delete(`/api/todoAPi/${id}`)
         .then((res) => {

@@ -9,6 +9,13 @@ router.get("/", (req, res, next) => {
     .catch(next);
 });
 
+router.get("/:id", (req, res, next) => {
+  // This will return all the data, exposing only the id and action field to the client
+  Todo.findOne({ _id: req.params.id }, "action")
+    .then((data) => res.json(data))
+    .catch(next);
+});
+
 router.post("/", (req, res, next) => {
   if (req.body.action) {
     Todo.create(req.body)
@@ -27,18 +34,20 @@ router.delete("/:id", (req, res, next) => {
     .catch(next);
 });
 
-router.put("/:id", async (req, res) => {
-  let todo = await Todo.findById(req.params.id);
-  todo = req.body;
+router.patch("/:id", (req, res) => {
+  Todo.findByIdAndUpdate(
+    { _id: req.params.id },
+    { $set: req.body },
+    // { overwrite: true },
 
-  const editTodo = new Todo(todo);
-
-  try {
-    await Todo.updateOne({ _id: req.params.id }, editTodo);
-    res.status(201).json(editTodo);
-  } catch (error) {
-    res.status(409).json({ message: error.message });
-  }
+    function (err) {
+      if (!err) {
+        res.send("Data successfully updated");
+      } else {
+        res.send(err);
+      }
+    }
+  );
 });
 
 module.exports = router;
